@@ -45,13 +45,20 @@ def predict_score(X_train,X_test):
 
 match = pd.read_csv('football_results.csv') #whole dataset
 data_team = pd.read_csv('team_skills.csv')
-match['date'] = pd.to_datetime(match['date']) ## Convert datatype to date
-match_filtered = match.loc[match['date'] > datetime.date(2010,1,1)] # only matches from 2016
+country_code = pd.read_csv('country_code.csv') # to fetch 3 letter ISO code
+country_code = country_code[['name','alpha-3']]
+country_code = dict(zip(country_code['name'],country_code['alpha-3']))
+data_team = data_team.replace({"Country": country_code})
+match = match.replace({"home_team": country_code})
+match = match.replace({"away_team": country_code})
+match['match_date'] = pd.to_datetime(match['match_date']) ## Convert datatype to date
+match_filtered = match.loc[match['match_date'] > datetime.date(2010,1,1)] # only matches from 2016
 country_array = data_team['Country'].values
 match_filtered = match_filtered.loc[(match_filtered['home_team'].isin(country_array)) | (match_filtered['away_team'].isin(country_array))]
 match_filtered = match_filtered.reset_index(drop=True)
-#n_matches = match_filtered.shape[0]
-#n_features = match_filtered.shape[1] - 1
+
+
+
 
 match_filtered['winning_team'] = np.where(match_filtered['home_score'] > match_filtered['away_score'],'Home',np.where(match_filtered['home_score'] < match_filtered['away_score'],'Away','Draw'))
 
@@ -69,34 +76,33 @@ match_filtered = match_filtered.dropna()
 
 ############ dict  streak####################################
 from collections import defaultdict
-dictt = defaultdict(int)
-home_win_steak = []
-away_win_steak = []
-
+dictt_w = defaultdict(int)
+dictt_l = defaultdict(int)
+home_win_streak = []
+away_win_streak = []
+home_lose_streak = []
+away_lose_streak = []
 for i, row in match_filtered.iterrows():
-    #match_filtered.at[i, 'home_winning_streak'] = 1
+    home_win_streak.append(dictt_w[row['home_team']])
+    away_win_streak.append(dictt_w[row['away_team']])
+    home_lose_streak.append(dictt_l[row['home_team']])
+    away_lose_streak.append(dictt_l[row['away_team']])
     if row['winning_team'] == 'Home':
-        dictt[row['home_team']] += 1
-        dictt[row['away_team']] = 0
+        dictt_w[row['home_team']] += 1
+        dictt_w[row['away_team']] = 0
+        dictt_l[row['away_team']] += 1
+        dictt_l[row['home_team']] = 0
     elif row['winning_team'] == 'Away':
-        dictt[row['away_team']] += 1
-        dictt[row['home_team']] = 0
-    if dictt[row['home_team']] - 1 == -1:
-        match_filtered.at[i, 'home_winning_streak'] = dictt[row['home_team']]
-    else:
-        match_filtered.at[i, 'home_winning_streak'] = dictt[row['home_team']] -1
-    if dictt[row['away_team']] - 1 == -1:
-        match_filtered.at[i, 'away_winning_streak'] = dictt[row['away_team']]   
-    else:
-        match_filtered.at[i, 'away_winning_streak'] = dictt[row['away_team']] -1
-    
-    
-        
-    home_win_steak.append(dictt[row['home_team']])
-    away_win_steak.append(dictt[row['away_team']])
-match_filtered['home_win_steak']= home_win_steak
-match_filtered['away_win_steak']= away_win_steak
+        dictt_w[row['away_team']] += 1
+        dictt_w[row['home_team']] = 0
+        dictt_l[row['home_team']] += 1
+        dictt_l[row['away_team']] = 0
+match_filtered['home_win_steak']= home_win_streak
+match_filtered['away_win_steak']= away_win_streak
+match_filtered['home_lose_steak']= home_lose_streak
+match_filtered['away_lose_steak']= away_lose_streak
 ##########################################################################
+m1 = match_filtered.loc[:,['home_team','away_team', 'home_score' , 'away_score', 'winning_team', 'home_win_steak', 'away_win_steak','home_lose_steak','away_lose_steak']]
 
 
 
