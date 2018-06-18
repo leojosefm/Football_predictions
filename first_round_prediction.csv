@@ -1,0 +1,49 @@
+Home Team,Away Team,winning_team
+Russia,Saudi Arabia,Home
+Egypt,Uruguay,Away
+Morocco,Iran,Home
+Portugal,Spain,Away
+France,Australia,Home
+Argentina,Iceland,Home
+Peru,Denmark,Away
+Croatia,Nigeria,Home
+Costa Rica,Serbia,Home
+Germany,Mexico,Home
+Brazil,Switzerland,Home
+Sweden,Korea Republic,Home
+Belgium,Panama,Home
+Tunisia,England,Away
+Colombia,Japan,Home
+Poland,Senegal,Home
+Russia,Egypt,Home
+Portugal,Morocco,Home
+Uruguay,Saudi Arabia,Home
+Iran,Spain,Away
+Denmark,Australia,Home
+France,Peru,Home
+Argentina,Croatia,Home
+Brazil,Costa Rica,Home
+Nigeria,Iceland,Home
+Serbia,Switzerland,Away
+Belgium,Tunisia,Home
+Korea Republic,Mexico,Away
+Germany,Sweden,Home
+England,Panama,Home
+Japan,Senegal,Home
+Poland,Colombia,Home
+Uruguay,Russia,Home
+Saudi Arabia,Egypt,Home
+Iran,Portugal,Away
+Spain,Morocco,Home
+Denmark,France,Away
+Australia,Peru,Home
+Nigeria,Argentina,Away
+Iceland,Croatia,Away
+Mexico,Sweden,Home
+Korea Republic,Germany,Away
+Serbia,Brazil,Away
+Switzerland,Costa Rica,Home
+Japan,Poland,Away
+Senegal,Colombia,Away
+Panama,Tunisia,Away
+England,Belgium,Away
