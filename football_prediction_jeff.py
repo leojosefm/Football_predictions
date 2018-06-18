@@ -52,14 +52,10 @@ data_team = data_team.replace({"Country": country_code})
 match = match.replace({"home_team": country_code})
 match = match.replace({"away_team": country_code})
 match['match_date'] = pd.to_datetime(match['match_date']) ## Convert datatype to date
-match_filtered = match.loc[match['match_date'] > datetime.date(2010,1,1)] # only matches from 2016
+match_filtered = match.loc[match['match_date'] > datetime.date(2010,1,1)] # only matches from 2010
 country_array = data_team['Country'].values
 match_filtered = match_filtered.loc[(match_filtered['home_team'].isin(country_array)) | (match_filtered['away_team'].isin(country_array))]
 match_filtered = match_filtered.reset_index(drop=True)
-
-
-
-
 match_filtered['winning_team'] = np.where(match_filtered['home_score'] > match_filtered['away_score'],'Home',np.where(match_filtered['home_score'] < match_filtered['away_score'],'Away','Draw'))
 
 ## Adding team skills to main data set
@@ -78,45 +74,95 @@ match_filtered = match_filtered.dropna()
 from collections import defaultdict
 dictt_w = defaultdict(int)
 dictt_l = defaultdict(int)
+head_to_head = defaultdict(lambda: [0,0,0,0,0,0])
 home_win_streak = []
 away_win_streak = []
 home_lose_streak = []
 away_lose_streak = []
-for i, row in match_filtered.iterrows():
+value_list = []
+for i, row in m2.iterrows():
     home_win_streak.append(dictt_w[row['home_team']])
     away_win_streak.append(dictt_w[row['away_team']])
     home_lose_streak.append(dictt_l[row['home_team']])
     away_lose_streak.append(dictt_l[row['away_team']])
+    l = sorted([row['home_team'],row['away_team']])
+    key = l[0]+'_'+l[1]
+    value_list.append(head_to_head[key])
     if row['winning_team'] == 'Home':
         dictt_w[row['home_team']] += 1
         dictt_w[row['away_team']] = 0
         dictt_l[row['away_team']] += 1
         dictt_l[row['home_team']] = 0
+        if row['home_team'] == l[0]:
+            v1 = head_to_head[key][0] + 1  ## Total no of games
+            v2 = head_to_head[key][1] + 1  ## First team win
+            v3 = head_to_head[key][2]      ## Second team win
+            v4 = head_to_head[key][3]      ## Draw
+            v5 = head_to_head[key][4] + row['home_score']  ## First team total goals till now
+            v6 = head_to_head[key][5] + row['away_score']  ## Second team total goals tills now
+        else:
+            v1 = head_to_head[key][0] + 1
+            v2 = head_to_head[key][1] 
+            v3 = head_to_head[key][2] + 1
+            v4 = head_to_head[key][3]
+            v5 = head_to_head[key][4] + row['away_score']
+            v6 = head_to_head[key][5] + row['home_score']
     elif row['winning_team'] == 'Away':
         dictt_w[row['away_team']] += 1
         dictt_w[row['home_team']] = 0
         dictt_l[row['home_team']] += 1
-        dictt_l[row['away_team']] = 0
-match_filtered['home_win_steak']= home_win_streak
-match_filtered['away_win_steak']= away_win_streak
-match_filtered['home_lose_steak']= home_lose_streak
-match_filtered['away_lose_steak']= away_lose_streak
+        if row['away_team'] == l[0]:
+            v1 = head_to_head[key][0] + 1
+            v2 = head_to_head[key][1] + 1
+            v3 = head_to_head[key][2] 
+            v4 = head_to_head[key][3]
+            v5 = head_to_head[key][4] + row['away_score']
+            v6 = head_to_head[key][5] + row['home_score']
+        else:
+            v1 = head_to_head[key][0] + 1
+            v2 = head_to_head[key][1] 
+            v3 = head_to_head[key][2] + 1
+            v4 = head_to_head[key][3] 
+            v5 = head_to_head[key][4] + row['home_score']
+            v6 = head_to_head[key][5] + row['away_score']
+    else:
+        if row['away_team'] == l[0]:
+            v1 = head_to_head[key][0] + 1
+            v2 = head_to_head[key][1] 
+            v3 = head_to_head[key][2]
+            v4 = head_to_head[key][3] + 1
+            v5 = head_to_head[key][4] + row['away_score']
+            v6 = head_to_head[key][5] + row['home_score']
+        else:
+            v1 = head_to_head[key][0] + 1
+            v2 = head_to_head[key][1] 
+            v3 = head_to_head[key][2]
+            v4 = head_to_head[key][3] + 1
+            v5 = head_to_head[key][4] + row['home_score']
+            v6 = head_to_head[key][5] + row['away_score']
+     
+    head_to_head[key] = [v1,v2,v3,v4,v5,v6]
+
+
+    
+    
+match_filtered['home_win_streak']= home_win_streak
+match_filtered['away_win_streak']= away_win_streak
+match_filtered['home_lose_streak']= home_lose_streak
+match_filtered['away_lose_streak']= away_lose_streak
 ##########################################################################
-m1 = match_filtered.loc[:,['home_team','away_team', 'home_score' , 'away_score', 'winning_team', 'home_win_steak', 'away_win_steak','home_lose_steak','away_lose_steak']]
+m1 = match_filtered.loc[:,['match_date','home_team','away_team', 'home_score' , 'away_score', 'winning_team', 'home_win_streak', 'away_win_streak','home_lose_streak','away_lose_streak']]
+m2 = m1.loc[((match_filtered['home_team'] == 'ENG') | (match_filtered['away_team'] == 'ENG')) & ((match_filtered['home_team'] == 'DEU') | (match_filtered['away_team'] == 'DEU'))]
 
 
 
-
-
-#match_filtered = match_filtered.reset_index()
-#match_filtered = match_filtered.reset_index(drop=True)
 
 # Step 1: Importing the dataset
 X = match_filtered.iloc[:, 11:19].values # :2 to make it a matrix
-#y_home = match_filtered.iloc[:,4].values
-#y_away = match_filtered.iloc[:,5].values
+y_home = match_filtered.iloc[:,4].values
+y_away = match_filtered.iloc[:,5].values
 
-y = match_filtered.iloc[:,10].values
+#y = match_filtered.iloc[:,10].values
 
 X_train,X_test,y_train,y_test = split_data(X,y)
 sc_X = StandardScaler()
