@@ -155,10 +155,11 @@ match_filtered['away_win_streak']= away_win_streak
 match_filtered['home_lose_streak']= home_lose_streak
 match_filtered['away_lose_streak']= away_lose_streak#
 
-m1 = match_filtered.loc[:,['match_date','home_team','away_team', 'home_score' , 'away_score', 'winning_team', 'home_win_streak', 'away_win_streak','home_lose_streak','away_lose_streak']] 
+#m1 = match_filtered.loc[:,['match_date','home_team','away_team', 'home_score' , 'away_score', 'winning_team', 'home_win_streak', 'away_win_streak','home_lose_streak','away_lose_streak']] 
+m1 = match_filtered
 m1 = m1.reset_index()
 temp_df = pd.concat([m1, pd.DataFrame(value_list, columns=['h2h_matches','key1_win','key2_win','tie','key1_goals','key2_goals','key'])], axis=1)
-temp_df = temp_df.drop(columns = ['index'])
+temp_df = temp_df.drop(columns = ['index','tournament','city','country','neutral']) # dropping unwanted columns
 ##########################################################################
 
 
