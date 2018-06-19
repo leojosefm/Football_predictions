@@ -58,8 +58,14 @@ match_filtered = match.loc[match['match_date'] > datetime.date(1900,1,1)] # only
 country_array = data_team['Country'].values
 match_filtered = match_filtered.loc[(match_filtered['home_team'].isin(country_array)) | (match_filtered['away_team'].isin(country_array))]
 match_filtered = match_filtered.reset_index(drop=True)
+for i,row in match_filtered.iterrows():
+    print (i)
+    l = sorted([row['home_team'],row['away_team']])
+    if row['home_team'] == l[1]:
+        match_filtered.loc[i,['home_team','away_team']] = match_filtered.loc[i,['away_team','home_team']].values
+        match_filtered.loc[i,['home_score','away_score']] = match_filtered.loc[i,['away_score','home_score']].values
 match_filtered['winning_team'] = np.where(match_filtered['home_score'] > match_filtered['away_score'],'Home',np.where(match_filtered['home_score'] < match_filtered['away_score'],'Away','Draw'))
-
+match_filtered = match_filtered.drop(columns = ['tournament','city','country','neutral'])
 ## Adding team skills to main data set
 match_filtered['home_attack'] = match_filtered.merge(data_team,left_on = 'home_team',right_on ='Country',how = 'left')['Attacking']
 match_filtered['home_defense'] = match_filtered.merge(data_team,left_on = 'home_team',right_on ='Country',how = 'left')['Defence']
@@ -70,6 +76,8 @@ match_filtered['away_defense'] = match_filtered.merge(data_team,left_on = 'away_
 match_filtered['away_mid'] = match_filtered.merge(data_team,left_on = 'away_team',right_on ='Country',how = 'left')['Midfield']
 match_filtered['away_overall'] = match_filtered.merge(data_team,left_on = 'away_team',right_on ='Country',how = 'left')['Overall']
 match_filtered = match_filtered.dropna()
+tmp_df = match_filtered
+tmp_df = tmp_df.reset_index(drop=True)
 #####################################
 ## Calculate win streak, head to head stats from the basic data set###########
 from collections import defaultdict
@@ -81,84 +89,60 @@ away_win_streak = []
 home_lose_streak = []
 away_lose_streak = []
 value_list = []
-for i, row in match_filtered.iterrows():
+#m2 = tmp_df.loc[((tmp_df['home_team'] == 'ENG') | (tmp_df['away_team'] == 'ENG')) & ((tmp_df['home_team'] == 'DEU') | (tmp_df['away_team'] == 'DEU'))]
+#m2 = m2.reset_index(drop=True)
+m2 = tmp_df
+for i, row in m2.iterrows():
     home_win_streak.append(dictt_w[row['home_team']])
     away_win_streak.append(dictt_w[row['away_team']])
     home_lose_streak.append(dictt_l[row['home_team']])
     away_lose_streak.append(dictt_l[row['away_team']])
-    l = sorted([row['home_team'],row['away_team']]) # Sorting key based on country name eg:- 'ENG_FRA'
+    l = sorted([row['home_team'],row['away_team']])
     key = l[0]+'_'+l[1]
-    head_to_head[key].append(key)
     value_list.append(head_to_head[key])
     if row['winning_team'] == 'Home':
         dictt_w[row['home_team']] += 1
         dictt_w[row['away_team']] = 0
         dictt_l[row['away_team']] += 1
         dictt_l[row['home_team']] = 0
-        if row['home_team'] == l[0]:
-            v0 = 0
-            v1 = head_to_head[key][0] + 1  ## Total no of games
-            v2 = head_to_head[key][1] + 1  ## First team win
-            v3 = head_to_head[key][2]      ## Second team win
-            v4 = head_to_head[key][3]      ## Draw
-            v5 = head_to_head[key][4] + row['home_score']  ## First team total goals till now
-            v6 = head_to_head[key][5] + row['away_score']  ## Second team total goals tills now
-        else:
-            v0 = 1
-            v1 = head_to_head[key][0] + 1
-            v2 = head_to_head[key][1] 
-            v3 = head_to_head[key][2] + 1
-            v4 = head_to_head[key][3]
-            v5 = head_to_head[key][4] + row['away_score']
-            v6 = head_to_head[key][5] + row['home_score']
+        v1 = head_to_head[key][0] + 1
+        v2 = head_to_head[key][1] + 1
+        v3 = head_to_head[key][2]
+        v4 = head_to_head[key][3] 
+        v5 = head_to_head[key][4] + row['home_score']
+        v6 = head_to_head[key][5] + row['away_score'] 
     elif row['winning_team'] == 'Away':
         dictt_w[row['away_team']] += 1
         dictt_w[row['home_team']] = 0
         dictt_l[row['home_team']] += 1
-        if row['away_team'] == l[0]:
-            v0 = 1
-            v1 = head_to_head[key][0] + 1
-            v2 = head_to_head[key][1] + 1
-            v3 = head_to_head[key][2] 
-            v4 = head_to_head[key][3]
-            v5 = head_to_head[key][4] + row['away_score']
-            v6 = head_to_head[key][5] + row['home_score']
-        else:
-            v0 = 0
-            v1 = head_to_head[key][0] + 1
-            v2 = head_to_head[key][1] 
-            v3 = head_to_head[key][2] + 1
-            v4 = head_to_head[key][3] 
-            v5 = head_to_head[key][4] + row['home_score']
-            v6 = head_to_head[key][5] + row['away_score']
-    else:
-        if row['away_team'] == l[0]:
-            v0 = 1
-            v1 = head_to_head[key][0] + 1
-            v2 = head_to_head[key][1] 
-            v3 = head_to_head[key][2]
-            v4 = head_to_head[key][3] + 1
-            v5 = head_to_head[key][4] + row['away_score']
-            v6 = head_to_head[key][5] + row['home_score']
-        else:
-            v0 = 0
-            v1 = head_to_head[key][0] + 1
             v2 = head_to_head[key][1] 
             v3 = head_to_head[key][2]
             v4 = head_to_head[key][3] + 1
             v5 = head_to_head[key][4] + row['home_score']
-            v6 = head_to_head[key][5] + row['away_score']
+        dictt_l[row['away_team']] += 0
+        v1 = head_to_head[key][0] + 1
+        v2 = head_to_head[key][1] 
+        v3 = head_to_head[key][2] + 1
+        v4 = head_to_head[key][3] 
+        v5 = head_to_head[key][4] + row['home_score']
+        v6 = head_to_head[key][5] + row['away_score']
+    else: # Draw
+        v1 = head_to_head[key][0] + 1
+        v2 = head_to_head[key][1] 
+        v3 = head_to_head[key][2]
+        v4 = head_to_head[key][3] + 1
+        v5 = head_to_head[key][4] + row['home_score']
+        v6 = head_to_head[key][5] + row['away_score']
+       
     head_to_head[key] = [v1,v2,v3,v4,v5,v6]
-match_filtered['home_win_streak']= home_win_streak
-match_filtered['away_win_streak']= away_win_streak
-match_filtered['home_lose_streak']= home_lose_streak
-match_filtered['away_lose_streak']= away_lose_streak#
+m2['home_win_streak']= home_win_streak
+m2['away_win_streak']= away_win_streak
+m2['home_lose_streak']= home_lose_streak
+m2['away_lose_streak']= away_lose_streak#
 #m1 = match_filtered.loc[:,['match_date','home_team','away_team', 'home_score' , 'away_score', 'winning_team', 'home_win_streak', 'away_win_streak','home_lose_streak','away_lose_streak']] 
-m1 = match_filtered
-m1 = m1.reset_index()
-temp_df = pd.concat([m1, pd.DataFrame(value_list, columns=['h2h_matches','key1_win','key2_win','tie','key1_goals','key2_goals','key'])], axis=1)
-temp_df = temp_df.drop(columns = ['index','tournament','city','country','neutral']) # dropping unwanted columns
-#m2 = m1.loc[((match_filtered['home_team'] == 'ENG') | (match_filtered['away_team'] == 'ENG')) & ((match_filtered['home_team'] == 'DEU') | (match_filtered['away_team'] == 'DEU'))]
+temp_df = pd.concat([m2, pd.DataFrame(value_list, columns=['h2h_matches','h2h_home_win','h2h_away_win','h2h_tie','h2h_home_goals','h2h_away_goals'])], axis=1)
+#temp_df = temp_df.drop(columns = ['index','tournament','city','country','neutral']) # dropping unwanted columns
+#m2 = temp_df.loc[((temp_df['home_team'] == 'ENG') | (temp_df['away_team'] == 'ENG')) & ((temp_df['home_team'] == 'DEU') | (temp_df['away_team'] == 'DEU'))]
 ##########################################################################
 ##########################################################################
 
