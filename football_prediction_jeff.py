@@ -52,7 +52,7 @@ data_team = data_team.replace({"Country": country_code})
 match = match.replace({"home_team": country_code})
 match = match.replace({"away_team": country_code})
 match['match_date'] = pd.to_datetime(match['match_date']) ## Convert datatype to date
-match_filtered = match.loc[match['match_date'] > datetime.date(2010,1,1)] # only matches from 2010
+match_filtered = match.loc[match['match_date'] > datetime.date(1900,1,1)] # only matches from 2010
 country_array = data_team['Country'].values
 match_filtered = match_filtered.loc[(match_filtered['home_team'].isin(country_array)) | (match_filtered['away_team'].isin(country_array))]
 match_filtered = match_filtered.reset_index(drop=True)
@@ -80,7 +80,7 @@ away_win_streak = []
 home_lose_streak = []
 away_lose_streak = []
 value_list = []
-for i, row in m2.iterrows():
+for i, row in match_filtered.iterrows():
     home_win_streak.append(dictt_w[row['home_team']])
     away_win_streak.append(dictt_w[row['away_team']])
     home_lose_streak.append(dictt_l[row['home_team']])
@@ -149,18 +149,21 @@ for i, row in m2.iterrows():
             v6 = head_to_head[key][5] + row['away_score']
      
     head_to_head[key] = [v1,v2,v3,v4,v5,v6]
-    
-temp_df = pd.concat([m2, pd.DataFrame(value_list, columns=['h2h_matches','l0_win','l1_win','tie','lo_goals','l1_goals','key'])], axis=1)
-    
-    
+
 match_filtered['home_win_streak']= home_win_streak
 match_filtered['away_win_streak']= away_win_streak
 match_filtered['home_lose_streak']= home_lose_streak
-match_filtered['away_lose_streak']= away_lose_streak
+match_filtered['away_lose_streak']= away_lose_streak#
+
+m1 = match_filtered.loc[:,['match_date','home_team','away_team', 'home_score' , 'away_score', 'winning_team', 'home_win_streak', 'away_win_streak','home_lose_streak','away_lose_streak']] 
+m1 = m1.reset_index()
+temp_df = pd.concat([m1, pd.DataFrame(value_list, columns=['h2h_matches','key1_win','key2_win','tie','key1_goals','key2_goals','key'])], axis=1)
+temp_df = temp_df.drop(columns = ['index'])
 ##########################################################################
-m1 = match_filtered.loc[:,['match_date','home_team','away_team', 'home_score' , 'away_score', 'winning_team', 'home_win_streak', 'away_win_streak','home_lose_streak','away_lose_streak']]
-m2 = m1.loc[((match_filtered['home_team'] == 'ENG') | (match_filtered['away_team'] == 'ENG')) & ((match_filtered['home_team'] == 'DEU') | (match_filtered['away_team'] == 'DEU'))]
-m2 = m2.reset_index()
+
+
+#m2 = m1.loc[((match_filtered['home_team'] == 'ENG') | (match_filtered['away_team'] == 'ENG')) & ((match_filtered['home_team'] == 'DEU') | (match_filtered['away_team'] == 'DEU'))]
+
 
 
 # Step 1: Importing the dataset
