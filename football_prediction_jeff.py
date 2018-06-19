@@ -115,10 +115,6 @@ for i, row in m2.iterrows():
         dictt_w[row['away_team']] += 1
         dictt_w[row['home_team']] = 0
         dictt_l[row['home_team']] += 1
-            v2 = head_to_head[key][1] 
-            v3 = head_to_head[key][2]
-            v4 = head_to_head[key][3] + 1
-            v5 = head_to_head[key][4] + row['home_score']
         dictt_l[row['away_team']] += 0
         v1 = head_to_head[key][0] + 1
         v2 = head_to_head[key][1] 
