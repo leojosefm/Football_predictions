@@ -88,12 +88,14 @@ for i, row in m2.iterrows():
     l = sorted([row['home_team'],row['away_team']])
     key = l[0]+'_'+l[1]
     value_list.append(head_to_head[key])
+    value_list
     if row['winning_team'] == 'Home':
         dictt_w[row['home_team']] += 1
         dictt_w[row['away_team']] = 0
         dictt_l[row['away_team']] += 1
         dictt_l[row['home_team']] = 0
         if row['home_team'] == l[0]:
+            v0 = 0
             v1 = head_to_head[key][0] + 1  ## Total no of games
             v2 = head_to_head[key][1] + 1  ## First team win
             v3 = head_to_head[key][2]      ## Second team win
@@ -101,6 +103,7 @@ for i, row in m2.iterrows():
             v5 = head_to_head[key][4] + row['home_score']  ## First team total goals till now
             v6 = head_to_head[key][5] + row['away_score']  ## Second team total goals tills now
         else:
+            v0 = 1
             v1 = head_to_head[key][0] + 1
             v2 = head_to_head[key][1] 
             v3 = head_to_head[key][2] + 1
@@ -112,6 +115,7 @@ for i, row in m2.iterrows():
         dictt_w[row['home_team']] = 0
         dictt_l[row['home_team']] += 1
         if row['away_team'] == l[0]:
+            v0 = 1
             v1 = head_to_head[key][0] + 1
             v2 = head_to_head[key][1] + 1
             v3 = head_to_head[key][2] 
@@ -119,6 +123,7 @@ for i, row in m2.iterrows():
             v5 = head_to_head[key][4] + row['away_score']
             v6 = head_to_head[key][5] + row['home_score']
         else:
+            v0 = 0
             v1 = head_to_head[key][0] + 1
             v2 = head_to_head[key][1] 
             v3 = head_to_head[key][2] + 1
@@ -127,6 +132,7 @@ for i, row in m2.iterrows():
             v6 = head_to_head[key][5] + row['away_score']
     else:
         if row['away_team'] == l[0]:
+            v0 = 1
             v1 = head_to_head[key][0] + 1
             v2 = head_to_head[key][1] 
             v3 = head_to_head[key][2]
@@ -134,6 +140,7 @@ for i, row in m2.iterrows():
             v5 = head_to_head[key][4] + row['away_score']
             v6 = head_to_head[key][5] + row['home_score']
         else:
+            v0 = 0
             v1 = head_to_head[key][0] + 1
             v2 = head_to_head[key][1] 
             v3 = head_to_head[key][2]
@@ -143,7 +150,7 @@ for i, row in m2.iterrows():
      
     head_to_head[key] = [v1,v2,v3,v4,v5,v6]
 
-
+temp_df = pd.concat([m2, pd.DataFrame(value_list, columns=['h2h_matches','l0_win','l1_win','tie','lo_goals','l1_goals'])], axis=1)
     
     
 match_filtered['home_win_streak']= home_win_streak
@@ -153,8 +160,7 @@ match_filtered['away_lose_streak']= away_lose_streak
 ##########################################################################
 m1 = match_filtered.loc[:,['match_date','home_team','away_team', 'home_score' , 'away_score', 'winning_team', 'home_win_streak', 'away_win_streak','home_lose_streak','away_lose_streak']]
 m2 = m1.loc[((match_filtered['home_team'] == 'ENG') | (match_filtered['away_team'] == 'ENG')) & ((match_filtered['home_team'] == 'DEU') | (match_filtered['away_team'] == 'DEU'))]
-
-
+m2 = m2.reset_index()
 
 
 # Step 1: Importing the dataset
