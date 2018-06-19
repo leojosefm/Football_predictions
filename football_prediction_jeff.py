@@ -86,7 +86,7 @@ for i, row in match_filtered.iterrows():
     away_win_streak.append(dictt_w[row['away_team']])
     home_lose_streak.append(dictt_l[row['home_team']])
     away_lose_streak.append(dictt_l[row['away_team']])
-    l = sorted([row['home_team'],row['away_team']])
+    l = sorted([row['home_team'],row['away_team']]) # Sorting key based on country name eg:- 'ENG_FRA'
     key = l[0]+'_'+l[1]
     head_to_head[key].append(key)
     value_list.append(head_to_head[key])
