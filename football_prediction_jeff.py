@@ -87,8 +87,8 @@ for i, row in m2.iterrows():
     away_lose_streak.append(dictt_l[row['away_team']])
     l = sorted([row['home_team'],row['away_team']])
     key = l[0]+'_'+l[1]
+    head_to_head[key].append(key)
     value_list.append(head_to_head[key])
-    value_list
     if row['winning_team'] == 'Home':
         dictt_w[row['home_team']] += 1
         dictt_w[row['away_team']] = 0
@@ -149,8 +149,8 @@ for i, row in m2.iterrows():
             v6 = head_to_head[key][5] + row['away_score']
      
     head_to_head[key] = [v1,v2,v3,v4,v5,v6]
-
-temp_df = pd.concat([m2, pd.DataFrame(value_list, columns=['h2h_matches','l0_win','l1_win','tie','lo_goals','l1_goals'])], axis=1)
+    
+temp_df = pd.concat([m2, pd.DataFrame(value_list, columns=['h2h_matches','l0_win','l1_win','tie','lo_goals','l1_goals','key'])], axis=1)
     
     
 match_filtered['home_win_streak']= home_win_streak
