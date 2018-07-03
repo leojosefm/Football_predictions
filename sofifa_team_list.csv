@@ -1,0 +1,533 @@
+year_list,countries,overall,attack,mid,defence
+2011,Spain,85,83,83,82
+2011,England,83,81,82,80
+2011,Argentina,83,82,79,78
+2011,Brazil,83,81,80,82
+2011,Italy,82,81,79,79
+2011,Germany,82,80,80,79
+2011,France,82,80,81,81
+2011,Netherlands,81,80,80,76
+2011,Portugal,81,79,78,79
+2011,Russia,79,78,76,74
+2011,Croatia,78,77,75,74
+2011,Uruguay,78,79,74,74
+2011,Turkey,78,76,76,75
+2011,Mexico,77,75,72,74
+2011,Czech Republic,77,72,71,73
+2011,Belgium,77,74,74,76
+2011,Cameroon,77,72,73,71
+2011,Republic of Ireland,76,74,72,71
+2011,Switzerland,76,74,73,74
+2011,Sweden,76,76,73,74
+2011,United States,75,71,73,71
+2011,Greece,75,72,72,73
+2011,Scotland,75,74,73,72
+2011,Norway,75,75,74,74
+2011,Denmark,75,73,74,73
+2011,Poland,74,72,71,70
+2011,Australia,73,70,70,68
+2011,Austria,73,72,69,73
+2011,South Africa,72,69,69,66
+2011,Bulgaria,72,70,71,67
+2011,Hungary,72,72,70,68
+2011,Romania,72,69,70,71
+2011,Ecuador,72,71,66,64
+2011,Slovenia,71,69,71,69
+2011,Finland,71,67,71,69
+2011,Northern Ireland,71,66,68,69
+2011,Korea Republic,70,70,68,66
+2011,China PR,65,61,60,61
+2011,New Zealand,64,64,58,61
+2010,Spain,85,83,83,82
+2010,Brazil,84,83,81,82
+2010,France,83,82,82,82
+2010,England,83,81,84,82
+2010,Italy,83,83,81,80
+2010,Argentina,83,83,81,78
+2010,Portugal,82,77,81,79
+2010,Germany,82,81,79,79
+2010,Russia,80,79,77,76
+2010,Netherlands,80,81,80,76
+2010,Uruguay,78,76,70,74
+2010,Turkey,78,77,77,74
+2010,Croatia,78,77,74,73
+2010,Czech Republic,78,73,74,74
+2010,Mexico,77,73,74,74
+2010,Sweden,77,78,73,74
+2010,Cameroon,76,73,73,74
+2010,Ukraine,76,73,72,70
+2010,Switzerland,76,74,74,73
+2010,Greece,76,76,75,74
+2010,Belgium,76,73,75,74
+2010,Paraguay,75,75,70,73
+2010,Australia,75,71,71,68
+2010,Scotland,75,73,73,72
+2010,Norway,75,75,73,72
+2010,Republic of Ireland,75,72,74,73
+2010,Romania,75,71,70,74
+2010,Denmark,75,72,72,74
+2010,United States,74,72,71,70
+2010,Austria,73,71,67,70
+2010,Bulgaria,73,70,70,68
+2010,Finland,72,67,69,70
+2010,Ecuador,72,67,69,65
+2010,South Africa,72,70,71,67
+2010,Poland,72,69,68,67
+2010,Hungary,72,69,72,66
+2010,Northern Ireland,71,66,66,70
+2010,Slovenia,70,70,67,67
+2010,Korea Republic,70,67,69,65
+2010,China PR,66,63,64,64
+2010,New Zealand,62,60,57,58
+2012,Spain,87,84,86,83
+2012,Germany,84,82,84,80
+2012,Italy,83,83,82,80
+2012,England,83,82,83,81
+2012,Brazil,83,83,81,83
+2012,France,83,81,81,82
+2012,Portugal,82,80,80,79
+2012,Netherlands,82,81,81,75
+2012,Argentina,82,86,79,77
+2012,Russia,79,77,78,76
+2012,Belgium,79,76,77,78
+2012,Uruguay,79,81,74,77
+2012,Croatia,78,78,78,74
+2012,Côte d'Ivoire,78,80,75,73
+2012,Colombia,77,77,74,72
+2012,Republic of Ireland,77,75,74,72
+2012,Turkey,77,74,78,73
+2012,Sweden,77,75,77,73
+2012,Poland,76,74,74,72
+2012,Switzerland,76,71,74,74
+2012,Chile,76,76,74,70
+2012,Mexico,76,76,73,74
+2012,Denmark,76,73,73,73
+2012,Cameroon,76,74,73,75
+2012,United States,75,70,74,72
+2012,Greece,75,73,73,75
+2012,Austria,74,75,71,72
+2012,Peru,74,69,71,66
+2012,Norway,74,73,73,73
+2012,Scotland,74,73,73,73
+2012,Slovenia,74,72,72,68
+2012,Ecuador,73,72,73,67
+2012,Romania,73,74,69,69
+2012,Hungary,72,68,70,67
+2012,Australia,72,70,69,68
+2012,Bulgaria,71,69,68,67
+2012,South Africa,71,70,71,67
+2012,Northern Ireland,71,65,69,70
+2012,Finland,71,68,70,67
+2012,Korea Republic,71,72,70,68
+2012,Egypt,69,66,67,67
+2012,New Zealand,67,67,62,62
+2009,Italy,85,84,83,81
+2009,Spain,85,82,83,81
+2009,England,84,80,82,81
+2009,Argentina,84,81,81,80
+2009,Brazil,84,81,81,80
+2009,Germany,83,82,79,79
+2009,France,83,82,82,81
+2009,Netherlands,82,80,77,76
+2009,Portugal,82,77,81,79
+2009,Turkey,78,78,76,73
+2009,Mexico,78,75,77,76
+2009,Croatia,78,76,75,72
+2009,Russia,78,75,75,71
+2009,Switzerland,77,74,71,75
+2009,Sweden,77,78,73,72
+2009,Denmark,77,73,73,72
+2009,Czech Republic,77,74,72,76
+2009,Romania,76,73,71,72
+2009,Scotland,76,72,74,71
+2009,Greece,76,75,76,75
+2009,Uruguay,76,74,72,73
+2009,Cameroon,75,72,73,67
+2009,Paraguay,75,77,70,72
+2009,Republic of Ireland,75,71,72,72
+2009,Australia,74,72,70,67
+2009,Bulgaria,74,72,71,67
+2009,Ukraine,74,71,69,67
+2009,Poland,74,67,69,65
+2009,Norway,74,74,72,71
+2009,Austria,73,71,69,71
+2009,Belgium,73,72,72,73
+2009,United States,73,73,69,70
+2009,South Africa,72,70,68,66
+2009,Finland,71,66,66,69
+2009,Hungary,71,62,70,67
+2009,Ecuador,70,67,67,64
+2009,Korea Republic,70,69,67,66
+2009,Slovenia,70,70,67,66
+2009,Northern Ireland,69,66,66,67
+2009,China PR,65,61,62,62
+2009,New Zealand,60,59,54,56
+2013,Spain,86,84,86,83
+2013,Germany,84,85,84,82
+2013,Italy,83,80,84,81
+2013,Brazil,82,83,81,83
+2013,Argentina,82,85,80,78
+2013,England,81,84,79,81
+2013,France,81,82,78,80
+2013,Netherlands,80,85,79,75
+2013,Belgium,80,79,79,79
+2013,Portugal,80,82,82,80
+2013,Uruguay,79,84,76,78
+2013,Colombia,78,80,75,77
+2013,Russia,78,78,78,76
+2013,Côte d'Ivoire,77,79,77,72
+2013,Turkey,77,78,76,74
+2013,Switzerland,76,75,77,75
+2013,Cameroon,76,79,76,76
+2013,Chile,76,77,76,72
+2013,Mexico,75,76,73,74
+2013,Sweden,75,81,75,73
+2013,Czech Republic,75,73,74,75
+2013,Paraguay,74,79,73,70
+2013,United States,74,73,76,67
+2013,Greece,74,74,72,76
+2013,Republic of Ireland,74,74,74,72
+2013,Poland,74,79,74,67
+2013,Denmark,74,72,74,75
+2013,Austria,74,73,75,74
+2013,Norway,73,79,71,72
+2013,Scotland,73,74,74,71
+2013,Peru,72,76,69,69
+2013,Slovenia,72,72,69,71
+2013,Ecuador,72,73,74,66
+2013,Venezuela,71,74,69,70
+2013,Romania,71,73,69,69
+2013,Korea Republic,71,74,69,70
+2013,Australia,71,71,69,68
+2013,Northern Ireland,70,70,68,69
+2013,South Africa,70,70,68,68
+2013,Finland,70,66,71,69
+2013,Hungary,69,69,68,67
+2013,Egypt,68,66,67,68
+2013,Bulgaria,68,69,67,66
+2013,Bolivia,66,72,64,65
+2013,New Zealand,65,66,58,64
+2013,India,58,60,56,57
+2008,Italy,84,83,82,83
+2008,England,84,84,83,83
+2008,Brazil,84,84,83,83
+2008,France,84,85,83,82
+2008,Spain,84,83,83,80
+2008,Argentina,83,84,83,81
+2008,Portugal,82,78,83,78
+2008,Germany,82,82,81,82
+2008,Netherlands,81,82,80,77
+2008,Mexico,78,77,75,75
+2008,Czech Republic,78,78,76,77
+2008,Turkey,77,79,77,74
+2008,Greece,77,77,77,77
+2008,Nigeria,77,78,75,73
+2008,Denmark,77,75,75,76
+2008,Croatia,76,81,74,73
+2008,Russia,76,73,73,75
+2008,Sweden,76,79,74,75
+2008,Uruguay,75,77,73,74
+2008,Paraguay,75,77,73,75
+2008,Cameroon,75,77,71,73
+2008,Switzerland,75,75,73,75
+2008,Republic of Ireland,75,76,75,75
+2008,Scotland,75,76,79,73
+2008,Norway,75,76,75,73
+2008,Australia,74,73,71,68
+2008,United States,74,78,72,72
+2008,Poland,74,75,73,69
+2008,Romania,74,74,71,72
+2008,Ukraine,74,76,75,67
+2008,Belgium,73,73,73,74
+2008,Bulgaria,73,74,72,70
+2008,Finland,72,70,71,70
+2008,Wales,71,73,72,70
+2008,Austria,71,65,69,71
+2008,South Africa,71,74,71,67
+2008,Korea Republic,69,71,69,67
+2008,Slovenia,69,70,66,65
+2008,Northern Ireland,69,67,68,68
+2008,Ecuador,68,68,65,68
+2008,Hungary,68,63,69,67
+2008,China PR,65,64,67,65
+2008,New Zealand,60,62,59,58
+2007,Brazil,85,84,84,85
+2007,England,85,84,83,82
+2007,Italy,85,84,84,84
+2007,Spain,85,85,84,81
+2007,France,85,86,82,83
+2007,Germany,84,82,80,83
+2007,Argentina,83,83,79,80
+2007,Portugal,81,78,81,80
+2007,Turkey,79,80,76,74
+2007,Nigeria,78,79,68,77
+2007,Denmark,78,77,78,75
+2007,Russia,78,79,76,77
+2007,Mexico,78,78,76,78
+2007,Uruguay,77,78,72,73
+2007,Greece,77,77,78,78
+2007,Croatia,77,79,73,75
+2007,Cameroon,77,79,74,71
+2007,Serbia,77,77,72,72
+2007,Australia,76,75,75,73
+2007,Switzerland,76,76,74,77
+2007,Sweden,76,77,75,73
+2007,Republic of Ireland,76,74,73,76
+2007,Korea Republic,76,75,75,75
+2007,Belgium,75,74,72,75
+2007,United States,75,71,74,71
+2007,Norway,75,74,74,73
+2007,Paraguay,75,77,73,72
+2007,Ukraine,75,76,73,66
+2007,Poland,74,74,71,68
+2007,Bulgaria,74,74,72,62
+2007,Finland,74,72,68,69
+2007,Scotland,74,75,76,73
+2007,Romania,73,74,69,72
+2007,Austria,73,70,67,72
+2007,Wales,72,77,70,68
+2007,Slovenia,72,71,70,68
+2007,Ecuador,70,70,68,67
+2007,Tunisia,69,67,65,71
+2007,Northern Ireland,69,64,68,65
+2007,Hungary,68,68,66,67
+2007,China PR,68,68,66,66
+2014,Spain,85,86,86,83
+2014,Germany,84,82,85,81
+2014,Brazil,83,82,81,84
+2014,Italy,82,80,82,80
+2014,Argentina,82,84,80,80
+2014,Belgium,81,80,80,79
+2014,France,81,82,80,80
+2014,Portugal,80,82,79,80
+2014,England,80,83,79,79
+2014,Netherlands,79,84,76,75
+2014,Turkey,78,76,79,76
+2014,Russia,77,78,77,75
+2014,Switzerland,77,74,77,76
+2014,Colombia,77,77,78,75
+2014,Uruguay,77,84,75,76
+2014,Chile,76,76,75,71
+2014,Côte d'Ivoire,76,78,77,75
+2014,Cameroon,76,76,72,76
+2014,Poland,75,77,73,74
+2014,Sweden,75,81,73,72
+2014,Mexico,75,79,73,74
+2014,United States,74,75,74,73
+2014,Paraguay,74,78,73,70
+2014,Czech Republic,74,73,74,73
+2014,Greece,74,74,72,75
+2014,Wales,73,70,75,72
+2014,Denmark,73,71,74,74
+2014,Austria,73,73,71,72
+2014,Republic of Ireland,73,75,74,71
+2014,Scotland,72,75,71,70
+2014,Norway,72,71,73,70
+2014,Romania,72,73,71,72
+2014,Peru,72,77,69,70
+2014,Slovenia,72,70,73,71
+2014,Ecuador,72,72,73,67
+2014,South Africa,71,71,71,69
+2014,Venezuela,71,72,69,72
+2014,Korea Republic,71,70,71,69
+2014,Australia,69,71,70,65
+2014,Finland,69,67,71,69
+2014,Egypt,69,70,68,64
+2014,Hungary,69,69,67,65
+2014,Bulgaria,68,66,69,65
+2014,Northern Ireland,68,68,67,68
+2014,New Zealand,65,68,59,65
+2014,Bolivia,63,69,55,63
+2014,India,58,60,56,57
+2017,Spain,85,84,85,85
+2017,Germany,85,82,86,84
+2017,Brazil,84,87,82,85
+2017,Belgium,84,85,83,84
+2017,Portugal,83,85,82,81
+2017,Argentina,83,87,83,80
+2017,France,83,82,83,81
+2017,Italy,83,82,81,85
+2017,England,82,85,81,81
+2017,Netherlands,81,81,81,80
+2017,Uruguay,80,85,76,80
+2017,Poland,79,82,77,77
+2017,Chile,79,79,80,77
+2017,Turkey,78,78,79,78
+2017,Mexico,78,79,78,74
+2017,Denmark,78,76,79,76
+2017,Colombia,78,79,79,76
+2017,Switzerland,78,74,78,78
+2017,Austria,77,78,77,77
+2017,Wales,76,76,75,76
+2017,Côte d'Ivoire,76,78,78,76
+2017,Sweden,76,77,76,76
+2017,Greece,76,77,74,78
+2017,Russia,76,77,75,75
+2017,Czech Republic,75,73,76,74
+2017,Republic of Ireland,75,76,76,76
+2017,Paraguay,75,74,75,72
+2017,United States,75,75,75,76
+2017,Scotland,74,74,75,71
+2017,Slovenia,74,73,76,70
+2017,Ecuador,74,74,76,71
+2017,Romania,73,74,71,72
+2017,Norway,73,72,74,70
+2017,Australia,72,71,71,71
+2017,Hungary,72,72,73,70
+2017,Egypt,72,76,71,69
+2017,South Africa,72,70,72,72
+2017,Venezuela,72,76,71,71
+2017,Northern Ireland,71,69,72,72
+2017,Cameroon,71,71,73,71
+2017,Finland,70,71,70,70
+2017,Peru,70,72,69,68
+2017,Bulgaria,70,69,70,69
+2017,Canada,67,68,69,65
+2017,Bolivia,67,71,67,66
+2017,China PR,64,66,64,60
+2017,India,60,63,59,58
+2015,Germany,84,82,82,78
+2015,Spain,83,80,84,82
+2015,Argentina,82,86,80,81
+2015,Brazil,82,82,80,83
+2015,Belgium,81,80,81,77
+2015,France,81,80,80,80
+2015,England,80,81,78,78
+2015,Portugal,80,83,80,75
+2015,Italy,79,79,79,77
+2015,Netherlands,79,78,82,77
+2015,Colombia,78,81,78,74
+2015,Russia,77,78,77,75
+2015,Switzerland,77,76,77,78
+2015,Chile,76,76,76,73
+2015,Turkey,76,78,77,75
+2015,Uruguay,76,75,74,77
+2015,Czech Republic,74,73,73,72
+2015,Sweden,74,80,75,72
+2015,Côte d'Ivoire,74,78,75,68
+2015,Austria,74,71,74,74
+2015,Republic of Ireland,74,74,75,71
+2015,Poland,74,72,73,74
+2015,Denmark,74,75,72,74
+2015,Greece,74,78,73,74
+2015,Scotland,73,76,72,70
+2015,Wales,73,73,73,71
+2015,United States,73,76,70,72
+2015,Cameroon,72,75,71,74
+2015,Slovenia,72,72,71,68
+2015,Romania,72,71,72,70
+2015,Mexico,71,71,70,69
+2015,Paraguay,71,68,71,69
+2015,Norway,71,69,72,70
+2015,Venezuela,71,73,69,68
+2015,Peru,71,78,68,70
+2015,Ecuador,70,68,71,67
+2015,Korea Republic,70,66,70,67
+2015,South Africa,70,68,71,66
+2015,Northern Ireland,69,69,69,67
+2015,Hungary,69,70,72,66
+2015,Australia,69,71,70,66
+2015,Finland,69,69,68,68
+2015,Bulgaria,68,67,70,66
+2015,Egypt,68,72,68,65
+2015,Bolivia,67,74,65,67
+2015,New Zealand,65,65,60,65
+2015,India,57,59,54,53
+2018,Spain,86,84,86,86
+2018,Brazil,85,86,83,85
+2018,Germany,85,81,85,84
+2018,Belgium,84,86,84,85
+2018,France,84,83,86,81
+2018,Portugal,83,85,82,80
+2018,Italy,83,85,81,85
+2018,Argentina,82,87,81,80
+2018,England,82,83,81,81
+2018,Uruguay,80,86,76,79
+2018,Netherlands,80,80,80,80
+2018,Colombia,79,81,77,78
+2018,Switzerland,78,75,78,77
+2018,Russia,78,80,78,76
+2018,Denmark,78,75,78,76
+2018,Poland,78,82,75,79
+2018,Mexico,78,79,79,76
+2018,Turkey,77,80,77,75
+2018,Austria,77,80,77,75
+2018,Chile,77,77,80,75
+2018,Greece,76,78,74,77
+2018,Côte d'Ivoire,76,75,77,77
+2018,Czech Republic,75,75,74,73
+2018,Sweden,75,77,74,76
+2018,Republic of Ireland,75,75,74,75
+2018,Wales,75,82,72,76
+2018,Slovenia,75,73,75,74
+2018,United States,75,76,76,74
+2018,Paraguay,74,75,74,73
+2018,Norway,74,74,73,73
+2018,Scotland,74,75,74,74
+2018,Saudi Arabia,73,73,73,73
+2018,Australia,73,69,73,72
+2018,Venezuela,73,76,72,70
+2018,Peru,72,73,72,71
+2018,Egypt,72,81,72,70
+2018,Romania,72,72,72,70
+2018,Hungary,72,71,72,71
+2018,Ecuador,72,68,71,72
+2018,Cameroon,72,76,74,69
+2018,Iceland,72,73,75,70
+2018,Northern Ireland,71,71,71,71
+2018,South Africa,71,73,70,70
+2018,Bulgaria,70,70,70,69
+2018,Finland,70,71,69,66
+2018,China PR,70,70,70,70
+2018,Canada,69,70,71,66
+2018,New Zealand,68,69,66,67
+2018,Bolivia,67,69,67,66
+2018,India,60,63,58,58
+2016,Germany,84,79,83,82
+2016,Spain,84,81,85,83
+2016,Brazil,83,84,80,83
+2016,France,82,82,82,80
+2016,Argentina,82,88,80,77
+2016,Italy,81,78,79,84
+2016,England,81,81,79,80
+2016,Belgium,81,80,82,77
+2016,Portugal,81,85,80,78
+2016,Netherlands,79,81,78,77
+2016,Switzerland,78,76,77,78
+2016,Uruguay,78,84,75,77
+2016,Turkey,77,77,78,76
+2016,Russia,77,78,76,77
+2016,Mexico,77,76,79,76
+2016,Chile,77,80,77,75
+2016,Colombia,76,75,76,75
+2016,Côte d'Ivoire,76,78,77,71
+2016,Poland,76,82,75,74
+2016,Denmark,76,74,77,75
+2016,Austria,75,73,77,76
+2016,United States,75,74,75,73
+2016,Czech Republic,75,73,74,73
+2016,Sweden,75,80,73,73
+2016,Greece,75,76,72,76
+2016,Republic of Ireland,75,76,74,75
+2016,Wales,74,74,74,73
+2016,Scotland,74,76,74,72
+2016,Cameroon,73,69,69,77
+2016,Paraguay,73,73,71,71
+2016,Romania,73,71,72,73
+2016,Slovenia,73,70,73,72
+2016,Norway,73,70,72,71
+2016,Ecuador,72,74,72,69
+2016,Australia,72,71,72,69
+2016,Hungary,71,73,70,69
+2016,Venezuela,71,72,72,70
+2016,South Africa,71,67,71,72
+2016,Northern Ireland,70,68,70,69
+2016,Finland,70,66,71,67
+2016,Egypt,69,69,69,67
+2016,Bulgaria,69,69,70,68
+2016,China PR,69,70,67,66
+2016,Peru,68,69,67,67
+2016,Canada,67,67,70,64
+2016,Bolivia,65,61,65,65
+2016,New Zealand,64,66,61,66
+2016,India,58,61,56,57

@@ -39009,3 +39009,5 @@ match_date,home_team,away_team,home_score,away_score,tournament,city,country,neu
 2018-06-04,India,Kenya,3,0,Friendly,Mumbai,India,FALSE
 2018-06-14,Russia,Saudi Arabia,5,0,World Cup,Russia,Russia,FALSE
 2018-06-15,Egypt,Uruguay,0,1,World Cup,Russia,Russia,FALSE
+2018-06-16,Morocco,Iran,0,1,World Cup,Russia,Russia,FALSE
+2018-06-17,Portugal,Spain,3,3,World Cup,Russia,Russia,FALSE
