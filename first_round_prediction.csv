@@ -1,49 +1,49 @@
-Home Team,Away Team,winning_team
-Russia,Saudi Arabia,Home
-Egypt,Uruguay,Away
-Morocco,Iran,Home
-Portugal,Spain,Away
-France,Australia,Home
-Argentina,Iceland,Home
-Peru,Denmark,Away
-Croatia,Nigeria,Home
-Costa Rica,Serbia,Home
-Germany,Mexico,Home
-Brazil,Switzerland,Home
-Sweden,Korea Republic,Home
-Belgium,Panama,Home
-Tunisia,England,Away
-Colombia,Japan,Home
-Poland,Senegal,Home
-Russia,Egypt,Home
-Portugal,Morocco,Home
-Uruguay,Saudi Arabia,Home
-Iran,Spain,Away
-Denmark,Australia,Home
-France,Peru,Home
-Argentina,Croatia,Home
-Brazil,Costa Rica,Home
-Nigeria,Iceland,Home
-Serbia,Switzerland,Away
-Belgium,Tunisia,Home
-Korea Republic,Mexico,Away
-Germany,Sweden,Home
-England,Panama,Home
-Japan,Senegal,Home
-Poland,Colombia,Home
-Uruguay,Russia,Home
-Saudi Arabia,Egypt,Home
-Iran,Portugal,Away
-Spain,Morocco,Home
-Denmark,France,Away
-Australia,Peru,Home
-Nigeria,Argentina,Away
-Iceland,Croatia,Away
-Mexico,Sweden,Home
-Korea Republic,Germany,Away
-Serbia,Brazil,Away
-Switzerland,Costa Rica,Home
-Japan,Poland,Away
-Senegal,Colombia,Away
-Panama,Tunisia,Away
-England,Belgium,Away
+team_A,team_B,winning_team
+Russia,Saudi Arabia,team_B
+Egypt,Uruguay,team_B
+Morocco,Iran,Draw
+Portugal,Spain,Draw
+France,Australia,team_A
+Argentina,Iceland,team_A
+Peru,Denmark,team_B
+Croatia,Nigeria,team_B
+Costa Rica,Serbia,team_B
+Germany,Mexico,team_A
+Brazil,Switzerland,team_A
+Sweden,Korea Republic,team_A
+Belgium,Panama,team_A
+Tunisia,England,team_B
+Colombia,Japan,team_A
+Poland,Senegal,team_B
+Russia,Egypt,team_B
+Portugal,Morocco,team_A
+Uruguay,Saudi Arabia,team_A
+Iran,Spain,team_B
+Denmark,Australia,team_A
+France,Peru,team_A
+Argentina,Croatia,team_A
+Brazil,Costa Rica,team_A
+Nigeria,Iceland,team_A
+Serbia,Switzerland,team_B
+Belgium,Tunisia,team_A
+Korea Republic,Mexico,team_B
+Germany,Sweden,team_A
+England,Panama,team_A
+Japan,Senegal,Draw
+Poland,Colombia,team_B
+Uruguay,Russia,team_A
+Saudi Arabia,Egypt,team_B
+Iran,Portugal,team_B
+Spain,Morocco,team_A
+Denmark,France,team_B
+Australia,Peru,team_B
+Nigeria,Argentina,team_B
+Iceland,Croatia,team_B
+Mexico,Sweden,team_A
+Korea Republic,Germany,team_B
+Serbia,Brazil,team_B
+Switzerland,Costa Rica,team_A
+Japan,Poland,team_B
+Senegal,Colombia,team_B
+Panama,Tunisia,team_B
+England,Belgium,team_B
