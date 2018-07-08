@@ -2,3 +2,14 @@ INFO ; 2018-07-08 15:20:27,517 ; Process started
 INFO ; 2018-07-08 15:20:27,661 ; Number of records in historical data set : 39012
 INFO ; 2018-07-08 15:20:27,664 ; Reading records extracted from sofifa website using scrapy : 532
 INFO ; 2018-07-08 15:20:27,668 ; Missing countries : ['Costa Rica' 'Iran' 'Japan' 'Morocco' 'Panama' 'Senegal']
+INFO ; 2018-07-08 15:23:51,380 ; appending skills to the training data set
+INFO ; 2018-07-08 15:23:51,645 ; Calculating head to head stats and winning streak
+INFO ; 2018-07-08 15:24:00,665 ; head to head stats and team streaks calculated and appended to data set
+INFO ; 2018-07-08 15:24:00,665 ; Training the data set
+INFO ; 2018-07-08 15:24:01,122 ; models and accuracy scored calculated
+INFO ; 2018-07-08 15:24:01,122 ; Reading match fixtures to be predicted
+INFO ; 2018-07-08 15:24:01,137 ; Fetching  latest head to head stats from the main data set to be appended to match fixtures
+INFO ; 2018-07-08 15:24:01,251 ; Filling NA values with 0 as teams playing for the first time will have NA in head to head stats
+INFO ; 2018-07-08 15:24:01,253 ; Scaling features from match fixture set
+INFO ; 2018-07-08 15:24:01,253 ; Predicting match winners
+INFO ; 2018-07-08 15:24:01,260 ; Writing predicted result to a csv file
