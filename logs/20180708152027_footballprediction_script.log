@@ -1,0 +1,4 @@
+INFO ; 2018-07-08 15:20:27,517 ; Process started
+INFO ; 2018-07-08 15:20:27,661 ; Number of records in historical data set : 39012
+INFO ; 2018-07-08 15:20:27,664 ; Reading records extracted from sofifa website using scrapy : 532
+INFO ; 2018-07-08 15:20:27,668 ; Missing countries : ['Costa Rica' 'Iran' 'Japan' 'Morocco' 'Panama' 'Senegal']

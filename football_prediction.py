@@ -237,11 +237,12 @@ data_fixture = data_fixture.fillna(0)
 X = data_fixture.iloc[:, 7:25]
 X = X.values
 
-
+logging.info('Scaling features from match fixture set')
 sc_X = StandardScaler()
 X = sc_X.fit_transform(X)
 
-winning_team = classifier_lr.predict(X)
+logging.info('Predicting match winners')
+winning_team = classifier_nb.predict(X)
 winning_team = pd.DataFrame(winning_team,columns=['winning_team'])
 winning_team['index'] = winning_team.index
 data_fixture['index'] = data_fixture.index
@@ -250,7 +251,6 @@ data_fixture['index'] = data_fixture.index
 first_round_prediction = data_fixture[['index','team_A','team_B']].merge(winning_team,on='index',how='inner')
 first_round_prediction = first_round_prediction.drop('index',axis = 1)
 
+logging.info('Writing predicted result to a csv file')
 first_round_prediction.to_csv('first_round_prediction.csv',index=False)
 
-
-y_pred_lr
