@@ -223,7 +223,7 @@ data_fixture['A_win_streak'] = data_fixture.merge(ds_streak_A,left_on = ['team_A
 data_fixture['B_win_streak'] = data_fixture.merge(ds_streak_B,left_on = ['team_B'], right_on = ['team_B'], how = 'left')['B_win_streak']
 data_fixture['A_lose_streak'] = data_fixture.merge(ds_streak_A,left_on = ['team_A'], right_on = ['team_A'], how = 'left')['A_lose_streak']
 data_fixture['B_lose_streak'] = data_fixture.merge(ds_streak_B,left_on = ['team_B'], right_on = ['team_B'], how = 'left')['B_lose_streak']
-###############
+##########################
 data_fixture['h2h_matches'] = data_fixture.merge(ds_h2h,left_on = ['team_A','team_B'], right_on = ['team_A','team_B'], how = 'left')['h2h_matches']
 data_fixture['h2h_A_win'] = data_fixture.merge(ds_h2h,left_on = ['team_A','team_B'], right_on = ['team_A','team_B'], how = 'left')['h2h_A_win']
 data_fixture['h2h_B_win'] = data_fixture.merge(ds_h2h,left_on = ['team_A','team_B'], right_on = ['team_A','team_B'], how = 'left')['h2h_B_win']
