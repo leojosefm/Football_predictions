@@ -14,7 +14,7 @@ from sofifa.com and also computes point in time head to head stats and use them 
 4. dataset_prepared.csv :- Intermediate file created by football_prediction.py script . This contains all match history with team skills and point in time head to head stats
 5. first_round_prediction.csv :- Output file with winner's predicted
 
-Scripts:
+## Scripts:
 1. football_prediction.py : The main script which computes head to head stats and train the models and predict the outcomes.
 2. Football_predictions/football/football/spiders/matchcrawler.py :- The script scraps data from sofifa.com to fetch team skills.
 
