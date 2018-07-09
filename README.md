@@ -6,7 +6,7 @@ from sofifa.com and also computes point in time head to head stats and use them 
 Only group stage matches are predicted. 
 
 - Team skills are obtained from http://sofifa.com using Scrapy
-- Head to Head stats are computed in the Python script "football_prediction.py"
+- Point in time head to head stats are computed in the Python script "football_prediction.py"
 
 ## Data preparation
 1. football_results.csv :- The file contains all the international matches results since 1872
