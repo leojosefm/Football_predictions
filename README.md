@@ -1,6 +1,6 @@
 # Football_predictions
 ## Welcome !
-This is a project created by me and my friend ebbygeorge (https://github.com/ebbygeorge) as part of self learning Machine Learning and Python. This is out first project in Python. So we appreciate all suggestions :)
+This is a project created by me and my friend ebbygeorge (https://github.com/ebbygeorge) as part of self learning Machine Learning and Python. This is out first project in Python and also in Machine Learning, so we appreciate all suggestions :)
 We have a dataset of all international matches played since 1872. The project fetches additional information like team skills (attack,defense,midfield etc)
 from sofifa.com and also computes point in time head to head stats and use them as features for predicting the outcome of a match.
 Only group stage matches are predicted. 
