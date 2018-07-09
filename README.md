@@ -1,11 +1,12 @@
 # Football_predictions
 ## Welcome !
-This is a project created by me and my friend ebbygeorge as part of self learning Machine Learning and data preparation using Python 3x.
+This is a project created by me and my friend ebbygeorge (https://github.com/ebbygeorge) as part of self learning Machine Learning and Python. This is out first project in Python and also in Machine Learning, so we appreciate all suggestions :)
 We have a dataset of all international matches played since 1872. The project fetches additional information like team skills (attack,defense,midfield etc)
 from sofifa.com and also computes point in time head to head stats and use them as features for predicting the outcome of a match.
+Only group stage matches are predicted. 
 
 - Team skills are obtained from http://sofifa.com using Scrapy
-- Head to Head stats are computed in the Python script "football_prediction.py"
+- Point in time head to head stats are computed in the Python script "football_prediction.py"
 
 ## Data preparation
 1. football_results.csv :- The file contains all the international matches results since 1872
